@@ -1,1 +1,50 @@
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+double a,b,c, delta,x1,x2;
+
+cout << "Digite o valor de A: ";
+cin >> a;
+
+cout << "Digite o valor de B: ";
+cin >> b;
+
+cout << "Digite o valor de C: ";
+cin >> c;
+
+if(a==0){
+
+    cout << "Impossivel calcular" << endl;
+    goto fim;
+}
+
+
+delta = (b*b) - 4*(a*c);
+
+if(delta < 0){
+
+    cout << "Impossivel calcular" << endl;
+    goto fim;
+}
+
+x1 = (-b + sqrt(delta))/ (2*a);
+x2 = (-b - sqrt(delta))/ (2*a);
+
+
+cout << "X' = " << fixed << setprecision(5) << x1 << endl;
+cout << "X'' = " << fixed << setprecision(5) << x2 << endl;
+
+
+fim :
+
+    return 0;
+}
 
