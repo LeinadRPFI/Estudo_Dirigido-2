@@ -1,1 +1,49 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+#include <iomanip>
+
+using namespace std;
+
+
+
+int main (){
+
+    setlocale(LC_ALL,"Portuguese");
+
+    string resposta;
+    int classificacao = 0;
+
+    cout << "Você telefonou para a vítima? (S/N)" << endl;
+    cin >> resposta;
+    if(resposta == "S") classificacao++;
+
+    cout << "Você esteve no local do crime? (S/N)" << endl;
+    cin >> resposta;
+    if(resposta == "S") classificacao++;
+
+    cout << "Você mora perto da vítima? (S/N)" << endl;
+    cin >> resposta;
+    if(resposta == "S") classificacao++;
+
+    cout << "Você devia para a vítima? (S/N)" << endl;
+    cin >> resposta;
+    if(resposta == "S") classificacao++;
+
+    cout << "Você já trabalhou com a vítima? (S/N)" << endl;
+    cin >> resposta;
+    if(resposta == "S") classificacao++;
+
+
+    if(classificacao == 5){ cout << "Voçê é o assassino!!";}
+
+    if(classificacao == 3 || classificacao == 4) { cout << "Voçê é cúmplice!!";}
+
+    if(classificacao == 2) { cout << "Voçê é suspeito!!";}
+
+    if(classificacao < 2) { cout << "Voçê é inocente!!";}
+
+
+        return 0;
+    }
 
