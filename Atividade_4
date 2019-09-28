@@ -1,1 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+#include <iomanip>
+
+using namespace std;
+
+
+  // Função que converte as moedas;
+
+    void converter_moedas(double valor, string moeda){
+  
+    double conversao = 0;
+
+        if(moeda == "Euro"){
+
+            conversao = valor * 4.56;
+
+            cout << "O seu valor: R$ " << fixed << setprecision(2) << valor << " após convertido é igual a: € " << conversao;
+        }
+
+        if(moeda == "Dolar"){
+
+            conversao = valor * 4.17;
+
+            cout << "O seu valor: R$ " << fixed << setprecision(2) << valor << " após convertido é igual a: US$ " << fixed << setprecision(2) << conversao;
+        }
+
+
+
+    }
+
+
+
+    int main (){
+
+         setlocale(LC_ALL,"Portuguese");
+
+    inicio:
+
+    double valor;
+    string moeda, decisao;
+
+    cout << "Digite o valor que deseja ser convetido" << endl;
+    cin >> valor;
+    cout << endl << "Digite a moeda que desejas converter seu valor (Dolar/Euro)" << endl;
+    cin >> moeda;
+
+    cout << endl;
+
+    converter_moedas(valor,moeda);
+
+    cout << endl << endl;
+
+    cout << "Deseja fazer outra conversão? (S/N)" << endl;
+    cin >> decisao;
+
+    if(decisao == "S") goto inicio;
+
+
+
+
+
+        return 0;
+    }
 
