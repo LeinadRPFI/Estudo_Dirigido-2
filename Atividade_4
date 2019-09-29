@@ -14,14 +14,14 @@ using namespace std;
 
         if(moeda == "Euro"){
 
-            conversao = valor * 4.56;
+            conversao = valor / 4.56;
 
             cout << "O seu valor: R$ " << fixed << setprecision(2) << valor << " após convertido é igual a: € " << conversao;
         }
 
         if(moeda == "Dolar"){
 
-            conversao = valor * 4.17;
+            conversao = valor / 4.17;
 
             cout << "O seu valor: R$ " << fixed << setprecision(2) << valor << " após convertido é igual a: US$ " << fixed << setprecision(2) << conversao;
         }
