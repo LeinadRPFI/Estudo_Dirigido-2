@@ -1,1 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>
+#include <iomanip>
+#include <string.h>
+#include <algorithm>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+     bool checar_inversao(string palavra){
+
+        string palavra_inversa = palavra;
+
+        reverse(palavra.begin(), palavra.end());
+
+        if( palavra == palavra_inversa) {return true;}
+
+        else {return false;}
+
+    }
+
+int main (){
+
+    setlocale(LC_ALL,"Portuguese");
+
+    string palavra;
+
+    cout << "Digite uma palavra: ";
+    cin >> palavra;
+    cout << endl;
+
+    if(checar_inversao(palavra) == true){
+
+        cout << "É um palíndromo";
+    }
+
+    else cout << "Não é um palíndromo";
+
+        return 0;
+    }
+
+
 
